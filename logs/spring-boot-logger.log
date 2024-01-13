@@ -132,3 +132,194 @@ This generated password is for development use only. Your security configuration
 2024-01-13 12:59:25 [SpringApplicationShutdownHook] INFO  [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-01-13 12:59:25 [SpringApplicationShutdownHook] INFO  [36mcom.zaxxer.hikari.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated...
 2024-01-13 12:59:25 [SpringApplicationShutdownHook] INFO  [36mcom.zaxxer.hikari.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed.
+2024-01-13 15:05:20 [background-preinit] INFO  [36mo.h.validator.internal.util.Version.<clinit>[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-01-13 15:05:20 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStarting[0;39m - Starting EcommerceWebsiteApplication using Java 21.0.1 with PID 11860 (C:\Users\fadyb\Desktop\ecommerce-website\target\classes started by fadyb in C:\Users\fadyb\Desktop\ecommerce-website)
+2024-01-13 15:05:20 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default"
+2024-01-13 15:05:20 [restartedMain] INFO  [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-13 15:05:20 [restartedMain] INFO  [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-13 15:05:21 [restartedMain] INFO  [36mo.s.b.w.e.tomcat.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http)
+2024-01-13 15:05:21 [restartedMain] INFO  [36mo.a.coyote.http11.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-13 15:05:21 [restartedMain] INFO  [36mo.a.catalina.core.StandardService.log[0;39m - Starting service [Tomcat]
+2024-01-13 15:05:21 [restartedMain] INFO  [36mo.a.catalina.core.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-13 15:05:21 [restartedMain] INFO  [36mo.a.c.c.C.[Tomcat].[localhost].[/].log[0;39m - Initializing Spring embedded WebApplicationContext
+2024-01-13 15:05:21 [restartedMain] INFO  [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1394 ms
+2024-01-13 15:05:22 [restartedMain] INFO  [36mo.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-13 15:05:22 [restartedMain] INFO  [36morg.hibernate.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-13 15:05:22 [restartedMain] INFO  [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled
+2024-01-13 15:05:22 [restartedMain] INFO  [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-13 15:05:22 [restartedMain] INFO  [36mcom.zaxxer.hikari.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting...
+2024-01-13 15:05:23 [restartedMain] INFO  [36mcom.zaxxer.hikari.pool.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5cdbaba4
+2024-01-13 15:05:23 [restartedMain] INFO  [36mcom.zaxxer.hikari.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed.
+2024-01-13 15:05:25 [restartedMain] INFO  [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-13 15:05:25 [restartedMain] WARN  [36mo.h.e.jdbc.spi.SqlExceptionHelper.logWarning[0;39m - SQL Warning Code: 0, SQLState: 00000
+2024-01-13 15:05:25 [restartedMain] WARN  [36mo.h.e.jdbc.spi.SqlExceptionHelper.logWarning[0;39m - constraint "uk_8tdjwoo7it10tld0e4joj88lj" of relation "users" does not exist, skipping
+2024-01-13 15:05:26 [restartedMain] INFO  [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13 15:05:26 [restartedMain] WARN  [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword[0;39m - 
+
+Using generated security password: 0f79f68e-1b32-4d9e-a74b-611e926d3b2e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-01-13 15:05:26 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized[0;39m - 2 mappings in 'requestMappingHandlerMapping'
+2024-01-13 15:05:26 [restartedMain] DEBUG [36mo.s.w.s.h.SimpleUrlHandlerMapping.logMappings[0;39m - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-01-13 15:05:26 [restartedMain] INFO  [36mo.s.s.web.DefaultSecurityFilterChain.<init>[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@511478e0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@127304fc, org.springframework.security.web.context.SecurityContextHolderFilter@32c3415c, org.springframework.security.web.header.HeaderWriterFilter@1b74d01f, org.springframework.web.filter.CorsFilter@21978609, org.springframework.security.web.authentication.logout.LogoutFilter@61f6e82e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69f445a5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@781deee6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e673032, org.springframework.security.web.access.ExceptionTranslationFilter@15604364, org.springframework.security.web.access.intercept.AuthorizationFilter@5e33b2ec]
+2024-01-13 15:05:26 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache[0;39m - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-13 15:05:26 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache[0;39m - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-13 15:05:26 [restartedMain] INFO  [36mo.s.b.d.a.OptionalLiveReloadServer.startServer[0;39m - LiveReload server is running on port 35729
+2024-01-13 15:05:26 [restartedMain] INFO  [36mo.a.coyote.http11.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-13 15:05:26 [restartedMain] INFO  [36mo.s.b.w.e.tomcat.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path ''
+2024-01-13 15:05:26 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStarted[0;39m - Started EcommerceWebsiteApplication in 7.058 seconds (process running for 8.047)
+2024-01-13 15:05:33 [SpringApplicationShutdownHook] INFO  [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13 15:05:33 [SpringApplicationShutdownHook] INFO  [36mcom.zaxxer.hikari.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated...
+2024-01-13 15:05:33 [SpringApplicationShutdownHook] INFO  [36mcom.zaxxer.hikari.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed.
+2024-01-13 15:06:00 [background-preinit] INFO  [36mo.h.validator.internal.util.Version.<clinit>[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-01-13 15:06:00 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStarting[0;39m - Starting EcommerceWebsiteApplication using Java 21.0.1 with PID 16000 (C:\Users\fadyb\Desktop\ecommerce-website\target\classes started by fadyb in C:\Users\fadyb\Desktop\ecommerce-website)
+2024-01-13 15:06:00 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default"
+2024-01-13 15:06:00 [restartedMain] INFO  [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-13 15:06:00 [restartedMain] INFO  [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-13 15:06:01 [restartedMain] INFO  [36mo.s.b.w.e.tomcat.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http)
+2024-01-13 15:06:01 [restartedMain] INFO  [36mo.a.coyote.http11.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-13 15:06:01 [restartedMain] INFO  [36mo.a.catalina.core.StandardService.log[0;39m - Starting service [Tomcat]
+2024-01-13 15:06:01 [restartedMain] INFO  [36mo.a.catalina.core.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-13 15:06:01 [restartedMain] INFO  [36mo.a.c.c.C.[Tomcat].[localhost].[/].log[0;39m - Initializing Spring embedded WebApplicationContext
+2024-01-13 15:06:01 [restartedMain] INFO  [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1355 ms
+2024-01-13 15:06:01 [restartedMain] INFO  [36mo.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-13 15:06:01 [restartedMain] INFO  [36morg.hibernate.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-13 15:06:01 [restartedMain] INFO  [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled
+2024-01-13 15:06:02 [restartedMain] INFO  [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-13 15:06:02 [restartedMain] INFO  [36mcom.zaxxer.hikari.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting...
+2024-01-13 15:06:03 [restartedMain] INFO  [36mcom.zaxxer.hikari.pool.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4036cbe5
+2024-01-13 15:06:03 [restartedMain] INFO  [36mcom.zaxxer.hikari.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed.
+2024-01-13 15:06:04 [restartedMain] INFO  [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-13 15:06:05 [restartedMain] INFO  [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13 15:06:05 [restartedMain] WARN  [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword[0;39m - 
+
+Using generated security password: badc2b98-9234-4bc0-b108-fbacde13525d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-01-13 15:06:06 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized[0;39m - 2 mappings in 'requestMappingHandlerMapping'
+2024-01-13 15:06:06 [restartedMain] DEBUG [36mo.s.w.s.h.SimpleUrlHandlerMapping.logMappings[0;39m - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-01-13 15:06:06 [restartedMain] INFO  [36mo.s.s.web.DefaultSecurityFilterChain.<init>[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38b614ed, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a4ff3ea, org.springframework.security.web.context.SecurityContextHolderFilter@1fdd0556, org.springframework.security.web.header.HeaderWriterFilter@122e4e03, org.springframework.web.filter.CorsFilter@69527d72, org.springframework.security.web.authentication.logout.LogoutFilter@14310bf9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73c9ebb3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a969e35, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d2aff30, org.springframework.security.web.access.ExceptionTranslationFilter@7caffc4d, org.springframework.security.web.access.intercept.AuthorizationFilter@2512fb3a]
+2024-01-13 15:06:06 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache[0;39m - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-13 15:06:06 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache[0;39m - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-13 15:06:06 [restartedMain] INFO  [36mo.s.b.d.a.OptionalLiveReloadServer.startServer[0;39m - LiveReload server is running on port 35729
+2024-01-13 15:06:06 [restartedMain] INFO  [36mo.a.coyote.http11.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-13 15:06:06 [restartedMain] INFO  [36mo.s.b.w.e.tomcat.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path ''
+2024-01-13 15:06:06 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStarted[0;39m - Started EcommerceWebsiteApplication in 6.945 seconds (process running for 7.903)
+2024-01-13 15:06:54 [SpringApplicationShutdownHook] INFO  [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13 15:06:54 [SpringApplicationShutdownHook] INFO  [36mcom.zaxxer.hikari.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated...
+2024-01-13 15:06:54 [SpringApplicationShutdownHook] INFO  [36mcom.zaxxer.hikari.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed.
+2024-01-13 15:06:57 [background-preinit] INFO  [36mo.h.validator.internal.util.Version.<clinit>[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-01-13 15:06:57 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStarting[0;39m - Starting EcommerceWebsiteApplication using Java 21.0.1 with PID 23416 (C:\Users\fadyb\Desktop\ecommerce-website\target\classes started by fadyb in C:\Users\fadyb\Desktop\ecommerce-website)
+2024-01-13 15:06:57 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default"
+2024-01-13 15:06:57 [restartedMain] INFO  [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-13 15:06:57 [restartedMain] INFO  [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-13 15:06:58 [restartedMain] INFO  [36mo.s.b.w.e.tomcat.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http)
+2024-01-13 15:06:58 [restartedMain] INFO  [36mo.a.coyote.http11.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-13 15:06:58 [restartedMain] INFO  [36mo.a.catalina.core.StandardService.log[0;39m - Starting service [Tomcat]
+2024-01-13 15:06:58 [restartedMain] INFO  [36mo.a.catalina.core.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-13 15:06:58 [restartedMain] INFO  [36mo.a.c.c.C.[Tomcat].[localhost].[/].log[0;39m - Initializing Spring embedded WebApplicationContext
+2024-01-13 15:06:58 [restartedMain] INFO  [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1344 ms
+2024-01-13 15:06:58 [restartedMain] INFO  [36mo.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-13 15:06:59 [restartedMain] INFO  [36morg.hibernate.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-13 15:06:59 [restartedMain] INFO  [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled
+2024-01-13 15:06:59 [restartedMain] INFO  [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-13 15:06:59 [restartedMain] INFO  [36mcom.zaxxer.hikari.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting...
+2024-01-13 15:07:00 [restartedMain] INFO  [36mcom.zaxxer.hikari.pool.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1fd04079
+2024-01-13 15:07:00 [restartedMain] INFO  [36mcom.zaxxer.hikari.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed.
+2024-01-13 15:07:02 [restartedMain] INFO  [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-13 15:07:02 [restartedMain] WARN  [36mo.h.e.jdbc.spi.SqlExceptionHelper.logWarning[0;39m - SQL Warning Code: 0, SQLState: 00000
+2024-01-13 15:07:02 [restartedMain] WARN  [36mo.h.e.jdbc.spi.SqlExceptionHelper.logWarning[0;39m - constraint "uk_8tdjwoo7it10tld0e4joj88lj" of relation "users" does not exist, skipping
+2024-01-13 15:07:02 [restartedMain] WARN  [36mo.h.e.jdbc.spi.SqlExceptionHelper.logWarning[0;39m - SQL Warning Code: 0, SQLState: 00000
+2024-01-13 15:07:02 [restartedMain] WARN  [36mo.h.e.jdbc.spi.SqlExceptionHelper.logWarning[0;39m - constraint "uk_6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2024-01-13 15:07:03 [restartedMain] INFO  [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13 15:07:03 [restartedMain] WARN  [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword[0;39m - 
+
+Using generated security password: 385349c9-38b5-4be8-ae8a-16df643ec303
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-01-13 15:07:03 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized[0;39m - 2 mappings in 'requestMappingHandlerMapping'
+2024-01-13 15:07:03 [restartedMain] DEBUG [36mo.s.w.s.h.SimpleUrlHandlerMapping.logMappings[0;39m - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-01-13 15:07:03 [restartedMain] INFO  [36mo.s.s.web.DefaultSecurityFilterChain.<init>[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2fa1aec0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4043377b, org.springframework.security.web.context.SecurityContextHolderFilter@60be0039, org.springframework.security.web.header.HeaderWriterFilter@371a1371, org.springframework.web.filter.CorsFilter@357b7324, org.springframework.security.web.authentication.logout.LogoutFilter@1ac6c597, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fdcd979, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@667fb050, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b06bf01, org.springframework.security.web.access.ExceptionTranslationFilter@2f644691, org.springframework.security.web.access.intercept.AuthorizationFilter@5087e15e]
+2024-01-13 15:07:03 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache[0;39m - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-13 15:07:03 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache[0;39m - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-13 15:07:03 [restartedMain] INFO  [36mo.s.b.d.a.OptionalLiveReloadServer.startServer[0;39m - LiveReload server is running on port 35729
+2024-01-13 15:07:03 [restartedMain] INFO  [36mo.a.coyote.http11.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-13 15:07:03 [restartedMain] INFO  [36mo.s.b.w.e.tomcat.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path ''
+2024-01-13 15:07:03 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStarted[0;39m - Started EcommerceWebsiteApplication in 7.081 seconds (process running for 8.073)
+2024-01-13 15:23:59 [SpringApplicationShutdownHook] INFO  [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13 15:23:59 [SpringApplicationShutdownHook] INFO  [36mcom.zaxxer.hikari.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated...
+2024-01-13 15:23:59 [SpringApplicationShutdownHook] INFO  [36mcom.zaxxer.hikari.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed.
+2024-01-13 15:24:07 [background-preinit] INFO  [36mo.h.validator.internal.util.Version.<clinit>[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-01-13 15:24:07 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStarting[0;39m - Starting EcommerceWebsiteApplication using Java 21.0.1 with PID 23312 (C:\Users\fadyb\Desktop\ecommerce-website\target\classes started by fadyb in C:\Users\fadyb\Desktop\ecommerce-website)
+2024-01-13 15:24:07 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default"
+2024-01-13 15:24:07 [restartedMain] INFO  [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-13 15:24:07 [restartedMain] INFO  [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-13 15:24:08 [restartedMain] INFO  [36mo.s.b.w.e.tomcat.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http)
+2024-01-13 15:24:08 [restartedMain] INFO  [36mo.a.coyote.http11.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-13 15:24:08 [restartedMain] INFO  [36mo.a.catalina.core.StandardService.log[0;39m - Starting service [Tomcat]
+2024-01-13 15:24:08 [restartedMain] INFO  [36mo.a.catalina.core.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-13 15:24:08 [restartedMain] INFO  [36mo.a.c.c.C.[Tomcat].[localhost].[/].log[0;39m - Initializing Spring embedded WebApplicationContext
+2024-01-13 15:24:08 [restartedMain] INFO  [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1409 ms
+2024-01-13 15:24:08 [restartedMain] INFO  [36mo.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-13 15:24:09 [restartedMain] INFO  [36morg.hibernate.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-13 15:24:09 [restartedMain] INFO  [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled
+2024-01-13 15:24:09 [restartedMain] INFO  [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-13 15:24:09 [restartedMain] INFO  [36mcom.zaxxer.hikari.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting...
+2024-01-13 15:24:10 [restartedMain] INFO  [36mcom.zaxxer.hikari.pool.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@773539c
+2024-01-13 15:24:10 [restartedMain] INFO  [36mcom.zaxxer.hikari.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed.
+2024-01-13 15:24:12 [restartedMain] INFO  [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-13 15:24:12 [restartedMain] INFO  [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13 15:24:12 [restartedMain] DEBUG [36mo.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder.performBuild[0;39m - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2024-01-13 15:24:13 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized[0;39m - 2 mappings in 'requestMappingHandlerMapping'
+2024-01-13 15:24:13 [restartedMain] DEBUG [36mo.s.w.s.h.SimpleUrlHandlerMapping.logMappings[0;39m - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-01-13 15:24:13 [restartedMain] INFO  [36mo.s.s.web.DefaultSecurityFilterChain.<init>[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34044c54, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33504b5f, org.springframework.security.web.context.SecurityContextHolderFilter@140568c4, org.springframework.security.web.header.HeaderWriterFilter@604b49ac, org.springframework.web.filter.CorsFilter@1c1433f0, org.springframework.security.web.authentication.logout.LogoutFilter@4265143, com.devfadi.ecommercewebsite.config.filter.JwtCheckFilter@3ce84103, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@363c9b99, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13863f11, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a18dc26, org.springframework.security.web.session.SessionManagementFilter@1b6a4b87, org.springframework.security.web.access.ExceptionTranslationFilter@7f243070, org.springframework.security.web.access.intercept.AuthorizationFilter@b818a49]
+2024-01-13 15:24:13 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache[0;39m - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-13 15:24:13 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache[0;39m - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-13 15:24:13 [restartedMain] INFO  [36mo.s.b.d.a.OptionalLiveReloadServer.startServer[0;39m - LiveReload server is running on port 35729
+2024-01-13 15:24:13 [restartedMain] INFO  [36mo.a.coyote.http11.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-13 15:24:13 [restartedMain] INFO  [36mo.s.b.w.e.tomcat.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path ''
+2024-01-13 15:24:13 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStarted[0;39m - Started EcommerceWebsiteApplication in 6.75 seconds (process running for 8.288)
+2024-01-13 15:38:16 [SpringApplicationShutdownHook] INFO  [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13 15:38:16 [SpringApplicationShutdownHook] INFO  [36mcom.zaxxer.hikari.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated...
+2024-01-13 15:38:16 [SpringApplicationShutdownHook] INFO  [36mcom.zaxxer.hikari.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed.
+2024-01-13 15:40:15 [background-preinit] INFO  [36mo.h.validator.internal.util.Version.<clinit>[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-01-13 15:40:15 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStarting[0;39m - Starting EcommerceWebsiteApplication using Java 21.0.1 with PID 10940 (C:\Users\fadyb\Desktop\ecommerce-website\target\classes started by fadyb in C:\Users\fadyb\Desktop\ecommerce-website)
+2024-01-13 15:40:15 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStartupProfileInfo[0;39m - No active profile set, falling back to 1 default profile: "default"
+2024-01-13 15:40:15 [restartedMain] INFO  [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-01-13 15:40:15 [restartedMain] INFO  [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-01-13 15:40:17 [restartedMain] INFO  [36mo.s.b.w.e.tomcat.TomcatWebServer.initialize[0;39m - Tomcat initialized with port 8080 (http)
+2024-01-13 15:40:17 [restartedMain] INFO  [36mo.a.coyote.http11.Http11NioProtocol.log[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-13 15:40:17 [restartedMain] INFO  [36mo.a.catalina.core.StandardService.log[0;39m - Starting service [Tomcat]
+2024-01-13 15:40:17 [restartedMain] INFO  [36mo.a.catalina.core.StandardEngine.log[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-13 15:40:17 [restartedMain] INFO  [36mo.a.c.c.C.[Tomcat].[localhost].[/].log[0;39m - Initializing Spring embedded WebApplicationContext
+2024-01-13 15:40:17 [restartedMain] INFO  [36mo.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1373 ms
+2024-01-13 15:40:17 [restartedMain] INFO  [36mo.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-13 15:40:17 [restartedMain] INFO  [36morg.hibernate.Version.logVersion[0;39m - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-13 15:40:17 [restartedMain] INFO  [36mo.h.c.i.RegionFactoryInitiator.initiateService[0;39m - HHH000026: Second-level cache disabled
+2024-01-13 15:40:17 [restartedMain] INFO  [36mo.s.o.j.p.SpringPersistenceUnitInfo.addTransformer[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-13 15:40:17 [restartedMain] INFO  [36mcom.zaxxer.hikari.HikariDataSource.getConnection[0;39m - HikariPool-1 - Starting...
+2024-01-13 15:40:19 [restartedMain] INFO  [36mcom.zaxxer.hikari.pool.HikariPool.checkFailFast[0;39m - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@662477f3
+2024-01-13 15:40:19 [restartedMain] INFO  [36mcom.zaxxer.hikari.HikariDataSource.getConnection[0;39m - HikariPool-1 - Start completed.
+2024-01-13 15:40:20 [restartedMain] INFO  [36mo.h.e.t.j.p.i.JtaPlatformInitiator.initiateService[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-13 15:40:21 [restartedMain] INFO  [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13 15:40:21 [restartedMain] WARN  [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword[0;39m - 
+
+Using generated security password: 92fc0c74-e7ae-441a-b0e0-24fa4b0afba0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-01-13 15:40:21 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.RequestMappingHandlerMapping.handlerMethodsInitialized[0;39m - 2 mappings in 'requestMappingHandlerMapping'
+2024-01-13 15:40:21 [restartedMain] DEBUG [36mo.s.w.s.h.SimpleUrlHandlerMapping.logMappings[0;39m - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-01-13 15:40:21 [restartedMain] INFO  [36mo.s.s.web.DefaultSecurityFilterChain.<init>[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5dcb7c20, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d0d252, org.springframework.security.web.context.SecurityContextHolderFilter@3a0bc115, org.springframework.security.web.header.HeaderWriterFilter@7b8687, org.springframework.web.filter.CorsFilter@40825c16, org.springframework.security.web.authentication.logout.LogoutFilter@1134ba6e, com.devfadi.ecommercewebsite.config.filter.JwtCheckFilter@2cb4156e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@664f5986, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33ae2b4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@521c94ed, org.springframework.security.web.session.SessionManagementFilter@5a2f2f60, org.springframework.security.web.access.ExceptionTranslationFilter@73c0a41f, org.springframework.security.web.access.intercept.AuthorizationFilter@6916aa29]
+2024-01-13 15:40:21 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache[0;39m - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-13 15:40:22 [restartedMain] DEBUG [36mo.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache[0;39m - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-13 15:40:22 [restartedMain] INFO  [36mo.s.b.d.a.OptionalLiveReloadServer.startServer[0;39m - LiveReload server is running on port 35729
+2024-01-13 15:40:22 [restartedMain] INFO  [36mo.a.coyote.http11.Http11NioProtocol.log[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-13 15:40:22 [restartedMain] INFO  [36mo.s.b.w.e.tomcat.TomcatWebServer.start[0;39m - Tomcat started on port 8080 (http) with context path ''
+2024-01-13 15:40:22 [restartedMain] INFO  [36mc.d.e.EcommerceWebsiteApplication.logStarted[0;39m - Started EcommerceWebsiteApplication in 7.117 seconds (process running for 8.108)
+2024-01-13 15:40:29 [SpringApplicationShutdownHook] INFO  [36mo.s.o.j.LocalContainerEntityManagerFactoryBean.destroy[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-13 15:40:30 [SpringApplicationShutdownHook] INFO  [36mcom.zaxxer.hikari.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown initiated...
+2024-01-13 15:40:30 [SpringApplicationShutdownHook] INFO  [36mcom.zaxxer.hikari.HikariDataSource.close[0;39m - HikariPool-1 - Shutdown completed.
