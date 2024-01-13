@@ -36,3 +36,6 @@ logging:
       okta: DEBUG
       auth0: DEBUG
 
+app:
+  cors:
+    allowed_origins: ${ALLOWED_ORIGINS}
