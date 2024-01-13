@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: true
+    open-in-view: false
+  mvc:
+    format:
+      date: dd/MM/yyyy
+  output:
+    ansi:
+      enabled: always
+  main:
+    banner-mode: off
+
+  thymeleaf:
+    check-template: false
+    check-template-location: false
+    enabled: false
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+        security: DEBUG
+    com:
+      okta: DEBUG
+      auth0: DEBUG
+
