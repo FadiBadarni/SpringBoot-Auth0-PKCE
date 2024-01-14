@@ -29,7 +29,7 @@ public class UserService {
         user.setAuth0Id(auth0Id);
         user.setEmail(userDTO.getEmail());
         user.setFullName(userDTO.getFullName());
-        user.setProfilePicture(userDTO.getPicture());
+        user.setProfilePicture(userDTO.getProfilePicture());
         user.setEmailVerified(userDTO.getEmailVerified());
         user.setRoles(userDTO.getRoles());
 

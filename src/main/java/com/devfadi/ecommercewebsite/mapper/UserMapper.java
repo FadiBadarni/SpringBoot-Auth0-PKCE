@@ -25,11 +25,10 @@ public class UserMapper {
         }
 
         return UserDTO.builder()
-                      .id(user.getId())
                       .auth0Id(user.getAuth0Id())
                       .email(user.getEmail())
                       .fullName(user.getFullName())
-                      .picture(user.getProfilePicture())
+                      .profilePicture(user.getProfilePicture())
                       .emailVerified(user.getEmailVerified())
                       .build();
     }
@@ -46,11 +45,10 @@ public class UserMapper {
         }
 
         return User.builder()
-                   .id(userDTO.getId())
                    .auth0Id(userDTO.getAuth0Id())
                    .email(userDTO.getEmail())
                    .fullName(userDTO.getFullName())
-                   .profilePicture(userDTO.getPicture())
+                   .profilePicture(userDTO.getProfilePicture())
                    .emailVerified(userDTO.getEmailVerified())
                    .build();
     }

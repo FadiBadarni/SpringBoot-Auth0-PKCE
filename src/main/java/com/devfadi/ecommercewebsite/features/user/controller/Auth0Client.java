@@ -28,13 +28,25 @@ public class Auth0Client {
         headers.setBearerAuth(accessToken);
         HttpEntity<String> entity = new HttpEntity<>("parameters", headers);
 
-        ResponseEntity<UserDTO> response = restTemplate.exchange(
-                userInfoEndpoint, HttpMethod.GET, entity, UserDTO.class);
+        ResponseEntity<Map<String, Object>> response = restTemplate.exchange(
+                userInfoEndpoint, HttpMethod.GET, entity, new ParameterizedTypeReference<>()
+                {
+                });
 
-        if (response.getStatusCode() == HttpStatus.OK) {
-            return response.getBody();
+        if (response.getStatusCode() == HttpStatus.OK && response.getBody() != null) {
+            return mapToUserDTO(response.getBody());
         } else {
             throw new RestClientException("Failed to retrieve user info from Auth0");
         }
+    }
+
+    private UserDTO mapToUserDTO(Map<String, Object> userInfo) {
+        UserDTO userDTO = new UserDTO();
+        userDTO.setAuth0Id((String) userInfo.get("sub"));
+        userDTO.setEmail((String) userInfo.get("email"));
+        userDTO.setFullName((String) userInfo.get("name"));
+        userDTO.setProfilePicture((String) userInfo.get("picture"));
+        userDTO.setEmailVerified((Boolean) userInfo.get("email_verified"));
+        return userDTO;
     }
 }
