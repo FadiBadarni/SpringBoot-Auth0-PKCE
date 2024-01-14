@@ -25,14 +25,11 @@ public class SecurityConfig
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf(AbstractHttpConfigurer::disable)
-                .cors(customizer -> customizer.configurationSource(corsConfigurationSource))
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(authorizer -> authorizer
-                        .requestMatchers("/api/auth/callback").permitAll()
-                        .anyRequest().authenticated())
-                .addFilterBefore(jwtCheckFilter, UsernamePasswordAuthenticationFilter.class);
+        http.csrf(AbstractHttpConfigurer::disable)
+            .cors(customizer -> customizer.configurationSource(corsConfigurationSource))
+            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+            .authorizeHttpRequests(authorizer -> authorizer.anyRequest().authenticated())
+            .addFilterBefore(jwtCheckFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
