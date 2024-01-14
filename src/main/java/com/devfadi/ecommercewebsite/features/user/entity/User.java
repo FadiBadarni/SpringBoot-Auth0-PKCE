@@ -30,13 +30,10 @@ public class User {
     @Column(unique = true)
     private String email;
 
-    private String firstName;
+    private String fullName;
 
-    private String lastName;
 
     private String profilePicture;
-
-    private String locale;
 
     @NotNull
     @Column(nullable = false)

@@ -3,29 +3,38 @@ package com.devfadi.ecommercewebsite.features.user.controller;
 import com.devfadi.ecommercewebsite.features.user.dto.UserDTO;
 import com.devfadi.ecommercewebsite.features.user.entity.User;
 import com.devfadi.ecommercewebsite.features.user.repository.UserRepository;
-import com.devfadi.ecommercewebsite.mapper.UserMapper;
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.util.WebUtils;
+
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class UserService {
 
     private final UserRepository userRepository;
-    private final UserMapper userMapper;
+    private final Auth0Client auth0Client;
+    public UserDTO registerOrUpdateUser(String accessToken) {
+        UserDTO userDTO = auth0Client.getUserInfo(accessToken);
+        String auth0Id = userDTO.getAuth0Id();
 
-    public User registerUser(UserDTO userDTO) {
-        User existingUser = userRepository.findByEmail(userDTO.getEmail());
-        if (existingUser != null) {
-            throw new IllegalArgumentException("User already exists with email: " + userDTO.getEmail());
-        }
+        // Check if user already exists in the database
+        Optional<User> existingUser = userRepository.findByAuth0Id(auth0Id);
 
-        User newUser = userMapper.fromDTO(userDTO);
+        User user;
+        // Update existing user's information
+        user = existingUser.orElseGet(User::new);
 
-        return userRepository.save(newUser);
+        // Set fields from userDTO to user
+        user.setAuth0Id(auth0Id);
+        user.setEmail(userDTO.getEmail());
+        user.setFullName(userDTO.getFullName());
+        user.setProfilePicture(userDTO.getPicture());
+        user.setEmailVerified(userDTO.getEmailVerified());
+        user.setRoles(userDTO.getRoles());
+
+        userRepository.save(user);
+
+        return userDTO;
     }
 }

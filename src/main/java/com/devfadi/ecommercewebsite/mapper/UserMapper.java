@@ -28,12 +28,9 @@ public class UserMapper {
                       .id(user.getId())
                       .auth0Id(user.getAuth0Id())
                       .email(user.getEmail())
-                      .firstName(user.getFirstName())
-                      .lastName(user.getLastName())
-                      .profilePicture(user.getProfilePicture())
-                      .locale(user.getLocale())
+                      .fullName(user.getFullName())
+                      .picture(user.getProfilePicture())
                       .emailVerified(user.getEmailVerified())
-                      .roles(new HashSet<>(user.getRoles()))
                       .build();
     }
 
@@ -52,12 +49,9 @@ public class UserMapper {
                    .id(userDTO.getId())
                    .auth0Id(userDTO.getAuth0Id())
                    .email(userDTO.getEmail())
-                   .firstName(userDTO.getFirstName())
-                   .lastName(userDTO.getLastName())
-                   .profilePicture(userDTO.getProfilePicture())
-                   .locale(userDTO.getLocale())
+                   .fullName(userDTO.getFullName())
+                   .profilePicture(userDTO.getPicture())
                    .emailVerified(userDTO.getEmailVerified())
-                   .roles(new HashSet<>(userDTO.getRoles())) // Deep copy for immutability
                    .build();
     }
 

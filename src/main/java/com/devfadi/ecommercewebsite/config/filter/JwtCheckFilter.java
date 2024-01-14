@@ -33,9 +33,6 @@ public class JwtCheckFilter extends OncePerRequestFilter
 
     @Value("${app.auth0.audience}")
     private String auth0Audience;
-
-    @Value("${app.access_cookie}")
-    private String jwtCookieName;
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
