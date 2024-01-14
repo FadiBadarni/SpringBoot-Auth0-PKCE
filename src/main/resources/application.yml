@@ -25,16 +25,24 @@ spring:
     check-template: false
     check-template-location: false
     enabled: false
-
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://${AUTH0_DOMAIN}/
+          jwk-set-uri: https://${AUTH0_DOMAIN}/.well-known/jwks.json
 logging:
   level:
     org:
       springframework:
-        web: DEBUG
         security: DEBUG
+        web: DEBUG
+        oauth2: DEBUG
     com:
       okta: DEBUG
       auth0: DEBUG
+
+
 
 app:
   cors:
@@ -43,7 +51,7 @@ app:
   refresh_cookie: ${REFRESH_COOKIE}
 
   auth0:
-    domain: ${AUTH0_DOMAIN}
-    audience: ${AUTH0_AUDIENCE}
+
+
     client_id: ${AUTH0_CLIENT_ID}
     user_info_url: ${AUTH0_USER_INFO_URL}
