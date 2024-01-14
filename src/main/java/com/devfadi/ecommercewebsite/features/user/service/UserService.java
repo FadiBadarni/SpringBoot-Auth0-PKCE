@@ -6,8 +6,10 @@ import com.devfadi.ecommercewebsite.features.user.dto.UserDTO;
 import com.devfadi.ecommercewebsite.features.user.entity.User;
 import com.devfadi.ecommercewebsite.features.user.repository.UserRepository;
 import com.devfadi.ecommercewebsite.mapper.UserMapper;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -21,12 +23,14 @@ public class UserService
     private final Auth0Client auth0Client;
     private final UserMapper userMapper;
 
+    public UserDTO registerOrUpdateUser() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-    public UserDTO registerOrUpdateUser(HttpServletRequest request) {
-        String accessToken = extractTokenFromHeader(request);
-        if (accessToken == null) {
+        if (authentication == null || !(authentication.getPrincipal() instanceof Jwt jwt)) {
             throw new InvalidTokenException("Invalid or missing token", null);
         }
+
+        String accessToken = jwt.getTokenValue();
 
         UserDTO userDTO = auth0Client.getUserInfo(accessToken);
         User user = userMapper.fromDTO(userDTO);
@@ -50,13 +54,5 @@ public class UserService
         existing.setProfilePicture(updated.getProfilePicture());
         existing.setEmailVerified(updated.getEmailVerified());
         existing.setRoles(updated.getRoles());
-    }
-
-    private String extractTokenFromHeader(HttpServletRequest request) {
-        String bearerToken = request.getHeader("Authorization");
-        if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
-            return bearerToken.substring(7);
-        }
-        return null;
     }
 }

@@ -2,7 +2,6 @@ package com.devfadi.ecommercewebsite.features.user.controller;
 
 import com.devfadi.ecommercewebsite.features.user.dto.UserDTO;
 import com.devfadi.ecommercewebsite.features.user.service.UserService;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -20,8 +19,9 @@ public class AuthController
     private final UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<UserDTO> registerOrUpdateUser(HttpServletRequest request) {
-        UserDTO user = userService.registerOrUpdateUser(request);
+    public ResponseEntity<UserDTO> registerOrUpdateUser() {
+        UserDTO user = userService.registerOrUpdateUser();
         return ResponseEntity.ok(user);
     }
+
 }

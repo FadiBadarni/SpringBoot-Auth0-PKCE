@@ -42,16 +42,9 @@ logging:
       okta: DEBUG
       auth0: DEBUG
 
-
-
 app:
   cors:
     allowed_origins: ${ALLOWED_ORIGINS}
-  access_cookie: ${ACCESS_COOKIE}
-  refresh_cookie: ${REFRESH_COOKIE}
 
   auth0:
-
-
-    client_id: ${AUTH0_CLIENT_ID}
     user_info_url: ${AUTH0_USER_INFO_URL}

@@ -19,6 +19,14 @@ public class GlobalExceptionHandler
         return new ResponseEntity<>(error, HttpStatus.UNAUTHORIZED);
     }
 
+    @ExceptionHandler(UserInfoException.class)
+    public ResponseEntity<ErrorData> handleUserInfoException(UserInfoException ex) {
+        log.error("User info error: {}", ex.getMessage());
+        ErrorData error = ErrorData.builder().status(HttpStatus.INTERNAL_SERVER_ERROR.value())
+                                   .message("Error fetching user information: " + ex.getMessage()).build();
+        return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorData> handleException(Exception ex) {
         log.error("General error: {}", ex.getMessage());

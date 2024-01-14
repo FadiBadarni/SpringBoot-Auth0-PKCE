@@ -1,5 +1,6 @@
 package com.devfadi.ecommercewebsite.features.user.controller;
 
+import com.devfadi.ecommercewebsite.exception.UserInfoException;
 import com.devfadi.ecommercewebsite.features.user.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -12,7 +13,8 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Map;
 
 @Service
-public class Auth0Client {
+public class Auth0Client
+{
 
     private final RestTemplate restTemplate;
     private final String userInfoEndpoint;
@@ -23,20 +25,25 @@ public class Auth0Client {
         this.userInfoEndpoint = userInfoEndpoint;
     }
 
-    public UserDTO getUserInfo(String accessToken) throws RestClientException {
+    public UserDTO getUserInfo(String accessToken) {
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(accessToken);
         HttpEntity<String> entity = new HttpEntity<>("parameters", headers);
 
-        ResponseEntity<Map<String, Object>> response = restTemplate.exchange(
-                userInfoEndpoint, HttpMethod.GET, entity, new ParameterizedTypeReference<>()
-                {
-                });
+        try {
+            ResponseEntity<Map<String, Object>> response = restTemplate.exchange(userInfoEndpoint, HttpMethod.GET,
+                                                                                 entity,
+                                                                                 new ParameterizedTypeReference<>()
+                                                                                 {
+                                                                                 });
 
-        if (response.getStatusCode() == HttpStatus.OK && response.getBody() != null) {
-            return mapToUserDTO(response.getBody());
-        } else {
-            throw new RestClientException("Failed to retrieve user info from Auth0");
+            if (response.getStatusCode() == HttpStatus.OK && response.getBody() != null) {
+                return mapToUserDTO(response.getBody());
+            } else {
+                throw new UserInfoException("No user information found", null);
+            }
+        } catch (RestClientException e) {
+            throw new UserInfoException("Error retrieving user info from Auth0: " + e.getMessage(), e);
         }
     }
 
