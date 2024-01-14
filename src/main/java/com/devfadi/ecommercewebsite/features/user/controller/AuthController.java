@@ -1,37 +1,32 @@
 package com.devfadi.ecommercewebsite.features.user.controller;
 
+import com.devfadi.ecommercewebsite.features.user.dto.UserDTO;
+import com.devfadi.ecommercewebsite.features.user.entity.User;
+import com.devfadi.ecommercewebsite.mapper.UserMapper;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api/user")
 @RequiredArgsConstructor
 @Slf4j
 public class AuthController {
 
+    private final UserService userService;
+    private final UserMapper userMapper;
 
-    @PostMapping("/callback")
-    public ResponseEntity<?> callback(@RequestHeader("Authorization") String authorizationHeader) {
+    @PostMapping("/register")
+    public ResponseEntity<?> registerUser(@RequestBody UserDTO userDTO) {
         try {
-            String accessToken = extractAccessToken(authorizationHeader);
-            return ResponseEntity.ok("Success");
+            User registeredUser = userService.registerUser(userDTO);
+            UserDTO registeredUserDTO = userMapper.toDTO(registeredUser);
+            return ResponseEntity.ok(registeredUserDTO);
         } catch (Exception e) {
-            log.error("Error in callback: {}", e.getMessage());
+            log.error("Error in user registration: {}", e.getMessage());
             return ResponseEntity.status(500).body("Error: " + e.getMessage());
         }
     }
-
-    private String extractAccessToken(String authorizationHeader) {
-        // Assuming the header format is "Bearer <token>"
-        if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
-            return authorizationHeader.substring(7);
-        }
-        throw new IllegalArgumentException("Invalid Authorization header");
-    }
-
 }

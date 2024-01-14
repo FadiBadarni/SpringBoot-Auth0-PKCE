@@ -9,14 +9,15 @@ import com.auth0.jwt.interfaces.JWTVerifier;
 import io.micrometer.common.lang.NonNullApi;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
-import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
+import org.springframework.web.util.WebUtils;
 
 import java.io.IOException;
 import java.security.interfaces.RSAPublicKey;
@@ -27,18 +28,20 @@ import java.util.ArrayList;
 public class JwtCheckFilter extends OncePerRequestFilter
 {
 
-    @Value("${AUTH0_DOMAIN}")
+    @Value("${app.auth0.domain}")
     private String auth0Domain;
 
-    @Value("${AUTH0_AUDIENCE}")
+    @Value("${app.auth0.audience}")
     private String auth0Audience;
 
+    @Value("${app.access_cookie}")
+    private String jwtCookieName;
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
-                                    FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+            throws ServletException, IOException {
 
-        String token = getBearerToken(request);
-        if (StringUtils.hasText(token)) {
+        String token = extractTokenFromHeader(request);
+        if (token != null) {
             try {
                 DecodedJWT jwt = verifyToken(token);
                 UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
@@ -46,7 +49,8 @@ public class JwtCheckFilter extends OncePerRequestFilter
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             } catch (Exception e) {
                 SecurityContextHolder.clearContext();
-                throw new ServletException("Invalid token", e);
+                response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid token");
+                return;
             }
         }
 
@@ -56,6 +60,9 @@ public class JwtCheckFilter extends OncePerRequestFilter
     private DecodedJWT verifyToken(String token) throws Exception {
         JwkProvider jwkProvider = new JwkProviderBuilder(auth0Domain).build();
         DecodedJWT jwt = JWT.decode(token);
+
+        System.out.println("JWT Audience: " + jwt.getAudience());
+
         RSAPublicKey publicKey = (RSAPublicKey) jwkProvider.get(jwt.getKeyId()).getPublicKey();
         Algorithm algorithm = Algorithm.RSA256(publicKey, null);
         JWTVerifier verifier = JWT.require(algorithm)
@@ -65,12 +72,13 @@ public class JwtCheckFilter extends OncePerRequestFilter
         return verifier.verify(token);
     }
 
-    private String getBearerToken(HttpServletRequest request) {
-        String authHeader = request.getHeader("Authorization");
-        if (StringUtils.hasText(authHeader) && authHeader.startsWith("Bearer ")) {
-            return authHeader.substring(7);
+    private String extractTokenFromHeader(HttpServletRequest request) {
+        String bearerToken = request.getHeader("Authorization");
+        if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
+            return bearerToken.substring(7);
         }
-        return authHeader;
+        return null;
     }
+
 }
 
