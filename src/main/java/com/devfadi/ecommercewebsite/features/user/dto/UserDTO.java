@@ -2,6 +2,7 @@ package com.devfadi.ecommercewebsite.features.user.dto;
 
 
 import com.devfadi.ecommercewebsite.features.user.entity.Address;
+import com.devfadi.ecommercewebsite.features.user.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,7 +26,7 @@ public class UserDTO
 
     private Boolean emailVerified;
 
-    private Set<String> roles;
+    private Role role;
 
     private Set<Address> addresses;
 

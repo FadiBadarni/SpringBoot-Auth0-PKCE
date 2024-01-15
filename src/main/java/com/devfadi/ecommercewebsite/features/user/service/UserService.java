@@ -53,6 +53,6 @@ public class UserService
         existing.setFullName(updated.getFullName());
         existing.setProfilePicture(updated.getProfilePicture());
         existing.setEmailVerified(updated.getEmailVerified());
-        existing.setRoles(updated.getRoles());
+        existing.setRole(updated.getRole());
     }
 }
