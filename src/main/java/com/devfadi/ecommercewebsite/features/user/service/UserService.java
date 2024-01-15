@@ -11,6 +11,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -23,6 +24,7 @@ public class UserService
     private final Auth0Client auth0Client;
     private final UserMapper userMapper;
 
+    @Transactional
     public UserDTO registerOrUpdateUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 

@@ -46,7 +46,7 @@ public class User
 
     private String paymentPreference;
 
-    @ElementCollection(fetch = FetchType.LAZY)
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "user_preferences", joinColumns = @JoinColumn(name = "user_id"))
     @Column(name = "preference")
     private Set<String> preferences;

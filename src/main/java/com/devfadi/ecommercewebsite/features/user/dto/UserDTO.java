@@ -1,7 +1,6 @@
 package com.devfadi.ecommercewebsite.features.user.dto;
 
 
-import com.devfadi.ecommercewebsite.features.user.entity.Address;
 import com.devfadi.ecommercewebsite.features.user.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,7 +27,7 @@ public class UserDTO
 
     private Role role;
 
-    private Set<Address> addresses;
+    private Set<AddressDTO> addresses;
 
     private String paymentPreference;
 
