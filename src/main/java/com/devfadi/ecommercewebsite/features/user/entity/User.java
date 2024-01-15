@@ -42,4 +42,19 @@ public class User
     @Column(name = "role")
     private Set<String> roles;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Address> addresses;
+
+    private String paymentPreference;
+
+    @ElementCollection(fetch = FetchType.LAZY)
+    @CollectionTable(name = "user_preferences", joinColumns = @JoinColumn(name = "user_id"))
+    @Column(name = "preference")
+    private Set<String> preferences;
+
+    private String contactPreference;
+
+    private String accountStatus;
+
+    private String language;
 }
